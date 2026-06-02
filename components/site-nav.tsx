@@ -25,7 +25,7 @@ export function SiteNav() {
 
   return (
     <header
-  className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+  className={`fixed inset-x-0 top-0 z-50 ${
     open
       ? "bg-black border-b border-white/10"
       : scrolled
