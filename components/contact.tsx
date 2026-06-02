@@ -84,10 +84,15 @@ export function Contact() {
                   <Phone className="h-5 w-5 text-accent" strokeWidth={1.5} />
                   <span className="text-sm tracking-wide">+91 99959 52978</span>
                 </div>
-                <div className="flex items-center gap-4 border border-border/60 bg-card/60 p-5 backdrop-blur">
-                  <MapPin className="h-5 w-5 text-accent" strokeWidth={1.5} />
-                  <span className="text-sm tracking-wide">Kozhikode, Kerala</span>
-                </div>
+                <a
+                  href="https://maps.app.goo.gl/2TkQEQXFtY83Ycem6"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex items-center gap-4 border border-border/60 bg-card/60 p-5 backdrop-blur transition-colors hover:bg-secondary"
+                  >
+                <MapPin className="h-5 w-5 text-accent" strokeWidth={1.5} />
+  <span className="text-sm tracking-wide">Kozhikode, Kerala</span>
+  </a>
               </div>
             </Reveal>
           </div>
