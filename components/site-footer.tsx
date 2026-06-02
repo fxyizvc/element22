@@ -28,7 +28,7 @@ export function SiteFooter() {
             </p>
             <div className="mt-8 flex items-center gap-3">
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/element22.in"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Instagram"
@@ -37,7 +37,7 @@ export function SiteFooter() {
                 <Instagram className="h-4 w-4" />
               </a>
               <a
-                href="https://wa.me/919000000000"
+                href="https://wa.me/919995952978"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="WhatsApp"
