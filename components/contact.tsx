@@ -52,7 +52,7 @@ export function Contact() {
           <div className="mt-12 flex flex-col gap-4">
             <Reveal delay={0.1}>
               <a
-                href="https://wa.me/919000000000"
+                href="https://wa.me/919995952978"
                 target="_blank"
                 rel="noreferrer"
                 className="group flex items-center justify-between border border-border/60 bg-card/60 p-5 backdrop-blur transition-colors hover:bg-secondary"
@@ -66,14 +66,14 @@ export function Contact() {
             </Reveal>
             <Reveal delay={0.18}>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/element22.in"
                 target="_blank"
                 rel="noreferrer"
                 className="group flex items-center justify-between border border-border/60 bg-card/60 p-5 backdrop-blur transition-colors hover:bg-secondary"
               >
                 <span className="flex items-center gap-4">
                   <Instagram className="h-5 w-5 text-accent" strokeWidth={1.5} />
-                  <span className="text-sm tracking-wide">@element22</span>
+                  <span className="text-sm tracking-wide">@element22.in</span>
                 </span>
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </a>
@@ -82,13 +82,17 @@ export function Contact() {
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="flex items-center gap-4 border border-border/60 bg-card/60 p-5 backdrop-blur">
                   <Phone className="h-5 w-5 text-accent" strokeWidth={1.5} />
-                  <span className="text-sm tracking-wide">+91 90000 00000</span>
+                  <span className="text-sm tracking-wide">+91 99959 52978</span>
                 </div>
-                <div className="flex items-center gap-4 border border-border/60 bg-card/60 p-5 backdrop-blur">
-                  <MapPin className="h-5 w-5 text-accent" strokeWidth={1.5} />
-                  <span className="text-sm tracking-wide">Kochi, Kerala</span>
-                </div>
-              </div>
+                <a
+  href="https://maps.app.goo.gl/2TkQEQXFtY83Ycem6"
+  target="_blank"
+  rel="noreferrer"
+  className="group flex items-center gap-4 border border-border/60 bg-card/60 p-5 backdrop-blur transition-colors hover:bg-secondary"
+>
+  <MapPin className="h-5 w-5 text-accent" strokeWidth={1.5} />
+  <span className="text-sm tracking-wide">Find Us on Maps</span>
+</a>
             </Reveal>
           </div>
         </div>
