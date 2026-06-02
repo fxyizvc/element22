@@ -25,10 +25,14 @@ export function SiteNav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled ? "border-b border-border/60 bg-background/80 backdrop-blur-xl" : "bg-transparent"
-      }`}
-    >
+  className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+    open
+      ? "bg-black border-b border-white/10"
+      : scrolled
+      ? "border-b border-border/60 bg-background/80 backdrop-blur-xl"
+      : "bg-transparent"
+  }`}
+>
       <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 lg:px-10">
       <a href="#top" className="flex items-center" aria-label="Element 22 home">
   <img
@@ -68,41 +72,54 @@ export function SiteNav() {
 
       <AnimatePresence>
         {open && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex flex-col bg-background/98 backdrop-blur-xl lg:hidden"
-          >
-            <div className="flex items-center justify-between px-6 py-5">
-              <span className="text-sm font-medium uppercase tracking-[0.35em]">Element 22</span>
-              <button onClick={() => setOpen(false)} aria-label="Close menu">
-                <X className="h-6 w-6" />
-              </button>
-            </div>
-            <div className="flex flex-1 flex-col justify-center gap-8 px-8">
-              {links.map((l, i) => (
-                <motion.a
-                  key={l.href}
-                  href={l.href}
-                  onClick={() => setOpen(false)}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.1 + i * 0.08 }}
-                  className="font-serif text-4xl font-light tracking-tight text-foreground"
-                >
-                  {l.label}
-                </motion.a>
-              ))}
-              <a
-                href="#contact"
-                onClick={() => setOpen(false)}
-                className="mt-6 inline-flex w-fit border border-foreground/30 px-6 py-3 text-xs uppercase tracking-[0.2em]"
-              >
-                Make an Appointment
-              </a>
-            </div>
-          </motion.div>
+          
+<motion.div
+  initial={false}
+  animate={{ opacity: 1 }}
+  exit={{ opacity: 0 }}
+  className="fixed inset-0 z-[999] flex flex-col bg-black lg:hidden">
+  {/* Top Bar */}
+  <div className="flex items-center justify-between border-b border-white/10 px-6 py-5">
+    <img
+      src="/e22.png"
+      alt="Element 22"
+      className="h-10 w-auto object-contain"
+    />
+
+    <button
+      onClick={() => setOpen(false)}
+      aria-label="Close menu"
+      className="text-white"
+    >
+      <X className="h-6 w-6" />
+    </button>
+  </div>
+
+  {/* Menu */}
+  <div className="flex flex-1 flex-col justify-center gap-6 px-8 pb-16">
+    {links.map((l, i) => (
+      <motion.a
+        key={l.href}
+        href={l.href}
+        onClick={() => setOpen(false)}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.08 + i * 0.06 }}
+        className="font-serif text-3xl font-light tracking-tight text-white"
+      >
+        {l.label}
+      </motion.a>
+    ))}
+
+    <a
+      href="#contact"
+      onClick={() => setOpen(false)}
+      className="mt-8 inline-flex w-fit border border-white/20 px-6 py-3 text-xs uppercase tracking-[0.2em] text-white transition-colors hover:bg-white hover:text-black"
+    >
+      Make an Appointment
+    </a>
+  </div>
+</motion.div>
         )}
       </AnimatePresence>
     </header>
